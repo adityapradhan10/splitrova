@@ -1,15 +1,18 @@
-import { Injectable } from '@nestjs/common';
+import { ForbiddenException, Injectable } from '@nestjs/common';
+import { metadata, module } from 'src/common/metadata';
 
 @Injectable()
 export class AuthService {
   signup() {
-    return {
-      message: 'Signup',
-    };
+    throw new ForbiddenException({
+      code: metadata.AUTH.INVALID,
+      module: module.AUTH,
+    });
   }
   login() {
-    return {
-      message: 'login',
-    };
+    throw new ForbiddenException({
+      code: metadata.AUTH.INVALID,
+      module: module.AUTH,
+    });
   }
 }
