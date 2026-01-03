@@ -1,7 +1,7 @@
-import { fileURLToPath } from "url";
-import { dirname } from "path";
-import globals from "globals";
-import baseConfig from "@splitrova/eslint-config";
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import globals from 'globals';
+import baseConfig from '@splitrova/eslint-config';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -14,7 +14,7 @@ export default [
         ...globals.jest,
       },
       parserOptions: {
-        project: "./tsconfig.json",
+        project: './tsconfig.json',
         tsconfigRootDir: __dirname,
       },
     },
