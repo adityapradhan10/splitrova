@@ -9,7 +9,7 @@ import { DB, DB_POOL } from 'src/common/constants';
   exports: [DB, DB_POOL],
 })
 export class DbModule implements OnModuleDestroy {
-  constructor(@Inject('DB_POOL') private pool: Pool) {}
+  constructor(@Inject(DB_POOL) private pool: Pool) {}
 
   async onModuleDestroy() {
     await this.pool.end();
