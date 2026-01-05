@@ -2,6 +2,7 @@ export const metadata = {
   AUTH: {
     SUCCESS: 0,
     INVALID: 1,
+    EXTERNAL_ERROR: 2,
   },
 };
 
